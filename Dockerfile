@@ -9,8 +9,8 @@ WORKDIR /usr/app
 # to the root directory of the container, then
 # the npm install command is executed
 COPY ./package.json ./
-COPY ./index.js ./
 RUN npm install
+COPY ./ ./
 
 # Default command
 CMD ["npm", "start"]
